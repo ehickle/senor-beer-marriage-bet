@@ -1,10 +1,8 @@
-#picture {
-  display: block;
-  margin: auto;
-  width: 35%;
-  height:400px;
-  z-index:"1";
+body {
+  background-image: url(https://timedotcom.files.wordpress.com/2015/12/statrup-bets-on-marriage.jpg?quality=85);
+  color: purple;
 }
+
 
 .friend {
   visibility: hidden;
@@ -16,9 +14,6 @@
 
 }
 
-#pic_block {
-}
-
 #picksbody {
   background-color: #cccccc
 }
@@ -26,10 +21,6 @@
 #link {
   font-size:20px;
   font-style:italic;
-}
-
-a:visited {
-  color:red;
 }
 
 #once {
@@ -43,19 +34,55 @@ main {
   z-index:"2";
   width:100%;
   margin: 0 auto;
+  padding-top: 100px;
+}
 
+footer {
+  color:goldenrod;
+  bottom:0px;
+  height: 2px;
+  text-align: center;
+}
+
+nav, footer {
+ width: 100%;
+ position: fixed;
+ padding: 15px;
+}
+
+.form-div {
+  width: 100px;
+  margin: 0 auto;
+  padding-top: 100px
+}
+
+nav {
+  margin-bottom: 50px;
+}
+a {
+  color: goldenrod;
 }
 
 h1 {
-  width: 250px;
+  width: 350px;
+  height: ;
+  text-align: center;
   min-width:200px;
   margin: 0 auto;
-  border:solid;
-  border-color:goldenrod;
-  color:blue
 }
+
+.submit {
+  width: 30px;
+  margin: 0 auto;
+  color:black;
+}
+
 .gold {
   background-color: goldenrod;
+}
+
+.grey {
+  background-color: #555F61
 }
 
 @media only screen and (max-width: 500px) {
