@@ -1,3 +1,3 @@
 get '/' do
-  "Hey I'm here FOOL!"
+  erb :index
 end
