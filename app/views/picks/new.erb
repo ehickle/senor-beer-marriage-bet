@@ -1,0 +1,14 @@
+<div class='pick-form gold'>
+  <form action='/picks' method='post'>
+    <% 12.times do |i| %>
+      <label> Pick <%= i+1 %>: </label>
+      <select name= ":name<%= i+1 %>" required>
+        <option value="" disabled selected hidden>Please Choose...</option>
+        <% @choices.each do |choice| %>
+          <option value= <%= choice %>><%= choice%></option>
+        <% end %>
+      </select>
+    <% end %>
+    <input type='submit' value = 'Submit Picks'>
+  </form>
+</div>
