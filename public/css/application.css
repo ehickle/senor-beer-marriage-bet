@@ -1,0 +1,64 @@
+#picture {
+  display: block;
+  margin: auto;
+  width: 35%;
+  height:400px;
+  z-index:"1";
+}
+
+.friend {
+  visibility: hidden;
+  display: inline-block;
+  position: absolute;
+  left:300px;
+  top:0px;
+  width: 50%;
+
+}
+
+#pic_block {
+}
+
+#picksbody {
+  background-color: #cccccc
+}
+
+#link {
+  font-size:20px;
+  font-style:italic;
+}
+
+a:visited {
+  color:red;
+}
+
+#once {
+  padding: 2px 0px 2px 0px;
+  border-bottom: dotted;
+  width:240px;
+}
+
+
+main {
+  z-index:"2";
+  width:100%;
+  margin: 0 auto;
+
+}
+
+h1 {
+  width: 250px;
+  min-width:200px;
+  margin: 0 auto;
+  border:solid;
+  border-color:goldenrod;
+  color:blue
+}
+.gold {
+  background-color: goldenrod;
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        width:100%;
+    }
