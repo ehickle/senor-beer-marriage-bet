@@ -1,0 +1,16 @@
+<div class="user-page">
+
+  <h2 class='name_display'>Welcome <%= @user.username %></h2>
+  <!-- <img src='< @user.name .jpeg'> -->
+  <p>Relationship Status: <%= @user.relationship_status %> <p>
+  <p>Bio: <%= @user.bio %> <p>
+
+<% if logged_in? && current_user.id == @user.id %>
+  <% if @user.picks.any? %>
+    <% picks = @user.picks.sort %>
+    <% picks.each do |pick| %>
+      <p> <%= pick.name %> </p>
+    <% end %>
+  <% end %>
+<% end %>
+</div>

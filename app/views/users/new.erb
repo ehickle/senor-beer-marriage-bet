@@ -1,0 +1,11 @@
+<div class="form-div">
+  <%= erb :_errors %>
+  <h2>username and password are required</h2>
+  <form class="form" method='POST' action="/users">
+    <input type="text" name="user[username]" placeholder="Name"> <br />
+    <input type="password" name="user[password]" placeholder="Password"> <br />
+    <input type="text" name="user[relationship_status]" placeholder="Relationship Status"> <br />
+    <textArea  name='user[bio]'>Bio</textArea>
+    <input type='submit' value='Create User'>
+  </form>
+</div>

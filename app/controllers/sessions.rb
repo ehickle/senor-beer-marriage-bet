@@ -4,11 +4,11 @@ end
 
 post '/sessions' do
 
-   @user = User.find_by(email: params[:email])
+  @user = User.find_by(username: params[:username])
 
   if @user && @user.password == params[:password]
     session[:user_id] = @user.id
-    redirect '/'
+    redirect "/users/#{@user.id}"
   else
     @errors = ["Email & password do not match"]
     erb :'/sessions/new'

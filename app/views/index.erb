@@ -7,11 +7,11 @@
   <div class ='home-body'>
     <p class='home-body'> This is the website to submit your answers for our group long term bet. Anyone who correctly guesses the order in which all twelve members of Senor Beer get married, will receive 1000 dollars from everyone else who submitted answers.</p>
   </div>
-
+<% if logged_in? %>
   <form class= 'submit' action='picks' method='get'>
     <input class='gold' type='Submit' value="Make Your Picks">
   </form>
-
+<% end %>
 <div>
 <p> A few rules as decided by the group:</p>
   <ul>

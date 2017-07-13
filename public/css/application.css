@@ -14,6 +14,14 @@ body {
 
 }
 
+.errors {
+  color:red;
+}
+
+.user-page {
+  padding: 150px;
+}
+
 #picksbody {
   background-color: #cccccc
 }
@@ -51,7 +59,7 @@ nav, footer {
 }
 
 .form-div {
-  width: 100px;
+  width: 300px;
   margin: 0 auto;
   padding-top: 100px
 }
