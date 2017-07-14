@@ -16,6 +16,8 @@ body {
 
 .errors {
   color:red;
+  width: 500px;
+  margin:50px auto;
 }
 
 .user-page {

@@ -1,4 +1,5 @@
-<% if current_user.picks.empty? %>
+<%= erb :_errors %>
+<% if logged_in? && current_user.picks.empty? %>
   <div class='form-div gold'>
     <form id='picks-form' action='/picks' method='post'>
       <% 12.times do |i| %>
@@ -16,6 +17,6 @@
 <% else %>
   <div class='already-picked'>
     <h3> Your picks have already been submitted </h3>
-   <a>go fuck yourself</a>
+   <a href='/picks'>go fuck yourself</a>
   </div>
 <% end %>
