@@ -1,7 +1,3 @@
-get picks '/' do
-
-end
-
 
 
 get '/picks/new' do
