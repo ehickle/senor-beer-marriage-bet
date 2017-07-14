@@ -53,12 +53,11 @@ window.fbAsyncInit = function() {
 };
 
 $('nav').on('click','#logout', function() {
-  $.get('/logout')
-  .done( function() {
-      FB.logout(function(response) {
-        console.log('logged out')
-      });
+  FB.logout(function(response) {
+      console.log('logged out')
   });
+
+  $.get('/logout')
 });
 
 
