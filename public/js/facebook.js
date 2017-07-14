@@ -9,7 +9,7 @@ function statusChangeCallback(response) {
   // for FB.getLginStatus().
   if (response.status === 'connected') {
     var token = response.authResponse.accessToken
-    var name = FB.api('/me' {fields: 'first_name'} , function(response) {
+    var name = FB.api('/me', {fields: 'first_name'} , function(response) {
       console.log(JSON.stringify(response));
     });
     console.log(name)
