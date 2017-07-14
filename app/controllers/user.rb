@@ -10,7 +10,7 @@ end
 post '/users' do
 
   if request.xhr?
-    params[:resp]
+     p params
   else
     @user = User.new(params[:user])
 
