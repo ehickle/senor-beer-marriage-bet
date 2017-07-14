@@ -10,7 +10,7 @@ end
 post '/users' do
 
   if request.xhr?
-    @user = User.create({params[:first_name]})
+    @user = User.create({name: params[:first_name]})
     if @user.save
       session[:user_id] = @user.id
     else
