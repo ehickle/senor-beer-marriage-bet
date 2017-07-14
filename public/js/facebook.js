@@ -6,11 +6,11 @@ function statusChangeCallback(response) {
   // The response object is returned with a status field that lets the
   // app know the current login status of the person.
   // Full docs on the response object can be found in the documentation
-  // for FB.getLoginStatus().
+  // for FB.getLginStatus().
   if (response.status === 'connected') {
     var token = response.authResponse.accessToken
-    var name = FB.api('/me', function(response) {
-      console.log(JSON.stringify(response[:name]));
+    var name = FB.api('/me' {fields: 'first_name'} , function(response) {
+      console.log(JSON.stringify(response));
     });
     console.log(name)
      $.post('/users', token)
