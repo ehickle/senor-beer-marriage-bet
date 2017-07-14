@@ -15,6 +15,7 @@ post '/users' do
       session[:user_id] = @user.id
     else
       @errors = @user.errors.full_messages
+      p @errors
       erb :index
     end
   else
