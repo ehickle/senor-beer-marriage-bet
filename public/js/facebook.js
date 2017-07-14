@@ -15,8 +15,7 @@ function statusChangeCallback(response) {
      })
   } else {
     // The person is not logged into your app or we are unable to tell.
-    errors = ['Please try again']
-    $.get('/', errors)
+    console.log('no')
   }
 }
 
