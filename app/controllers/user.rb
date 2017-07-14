@@ -8,13 +8,19 @@ get '/users/:id' do
 end
 
 post '/users' do
-  @user = User.new(params[:user])
 
-  if @user.save
-    redirect "/sessions/new"
+  if request.xhr?
+    name = FB.api('/me')[:name]
+    p name
   else
-    @errors = @user.errors.full_messages
-    erb :'/users/new'
+    @user = User.new(params[:user])
+
+    if @user.save
+      redirect "/sessions/new"
+    else
+      @errors = @user.errors.full_messages
+      erb :'/users/new'
+    end
   end
 end
 
