@@ -57,8 +57,6 @@ $(document).ready(function() {
   // $('a').click(function(){
   // })
   $('body').on('click', '.logout', function() {
-    console.log("hi!")
-      alert('hey')
     FB.logout(function(response) {
         console.log('logged out')
     });
