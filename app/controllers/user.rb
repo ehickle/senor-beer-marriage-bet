@@ -15,6 +15,7 @@ post '/users' do
       @user = User.new({username: params[:first_name]})
       if @user.save
         session[:user_id] = @user.id
+        redirect '/'
         200
       else
         @errors = @user.errors.full_messages
@@ -23,6 +24,7 @@ post '/users' do
       end
     else
       session[:user_id] = user_exist.id
+      redirect '/'
       200
     end
   else
