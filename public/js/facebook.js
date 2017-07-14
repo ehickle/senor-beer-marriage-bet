@@ -15,7 +15,7 @@ function statusChangeCallback(response) {
     console.log(name)
      $.post('/users', token)
      .done( function(response) {
-        console.log(response)
+        console.log(response[0])
      })
   } else {
     // The person is not logged into your app or we are unable to tell.
