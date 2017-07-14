@@ -1,0 +1,22 @@
+<% if logged_in? && current_user.picks.empty? == false %>
+  <table>
+    <tr>
+      <% @users.each do |user|%>
+        <th> <%= user.username %> </th>
+      <% end %>
+    </tr>
+      <% 12.times do |i| %>
+        <tr>
+          <% @users.each do |user|%>
+            <% user.picks.each do |pick| %>
+              <td> <%= pick.name %></td>
+            <% end %>
+          <% end %>
+        </tr>
+      <% end %>
+  </table>
+
+<% else %>
+  <h2> You can not view the picks until you have submitted yours </h2>
+  <a class='picks-btn' href='/picks/new'> Make your picks </a>
+<% end %>

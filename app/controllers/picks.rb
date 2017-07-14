@@ -1,4 +1,8 @@
-
+get '/picks' do
+  @users = User.all
+  p @users
+  erb :'/picks/show'
+end
 
 get '/picks/new' do
   @choices = ['Wyatt', 'Max', 'Evan', 'Pat', 'Stuart', 'Bobby','Tucker','Brennan','Nik','Ricky','Cole', 'Dennis']

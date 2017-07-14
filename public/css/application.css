@@ -103,6 +103,10 @@ h1 {
   background-color: goldenrod;
 }
 
+h2 {
+  margin-top: 50px;
+}
+
 h3 {
   padding-top: 80px;
   margin: 0;
