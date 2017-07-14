@@ -52,19 +52,20 @@ window.fbAsyncInit = function() {
     });
 };
 
-$('a').on('click', function() {
-  alert('what up')
-}
 
-$('nav').on('click','.logout', function() {
-  console.log("hi!")
-  FB.logout(function(response) {
-      console.log('logged out')
+$(document).ready(function() {
+  // $('a').click(function(){
+  // })
+  $('nav').on('click', '.logout' function() {
+    console.log("hi!")
+      alert('hey')
+    FB.logout(function(response) {
+        console.log('logged out')
+    });
+
+    $.get('/logout')
   });
 
-  $.get('/logout')
-});
-
-
+})
 
 
