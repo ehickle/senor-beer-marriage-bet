@@ -9,14 +9,13 @@ function statusChangeCallback(response) {
   // for FB.getLginStatus().
   if (response.status === 'connected') {
     var token = response.authResponse.accessToken
-    var name = FB.api('/me', {fields: 'first_name'} , function(response) {
-      console.log(JSON.stringify(response));
-    });
-    console.log(name)
-     $.post('/users', token)
+    FB.api('/me', {fields: 'first_name'} , function(resp) {
+      console.log(JSON.stringify(resp));
+     $.post('/users', resp)
      .done( function(response) {
         console.log(response)
      })
+    })
   } else {
     // The person is not logged into your app or we are unable to tell.
     console.log('no')
