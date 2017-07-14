@@ -9,9 +9,11 @@ function statusChangeCallback(response) {
   // for FB.getLoginStatus().
   if (response.status === 'connected') {
     var token = response.authResponse.accessToken
+    var name = FB.api('/me')
+    console.log(name)
      $.post('/users', token)
-     .done( function() {
-        console.log('success!')
+     .done( function(response) {
+        console.log('response')
      })
   } else {
     // The person is not logged into your app or we are unable to tell.

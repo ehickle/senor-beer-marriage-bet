@@ -10,8 +10,7 @@ end
 post '/users' do
 
   if request.xhr?
-    name = FB.api('/me')
-    p name
+    "Hello World"
   else
     @user = User.new(params[:user])
 
