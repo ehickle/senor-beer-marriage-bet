@@ -10,7 +10,7 @@ function statusChangeCallback(response) {
   if (response.status === 'connected') {
     var token = response.authResponse.accessToken
     FB.api('/me', {fields: 'first_name'} , function(resp) {
-      console.log(JSON.stringify(resp.first_name));
+      console.log(JSON.stringify(resp));
      $.post('/users', resp)
      .done( function(response) {
         console.log(response)
