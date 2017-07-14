@@ -26,6 +26,8 @@
     <% if logged_in? %>
       <a class='nav-link' href='/users/<%= current_user.id %>'><%= current_user.username %></a>
       <a class='logout' href='/logout'>Log out</a>
+    <% else %>
+      <div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
     <% end %>
   </nav>
     <main>

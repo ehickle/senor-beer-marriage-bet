@@ -10,14 +10,19 @@ end
 post '/users' do
 
   if request.xhr?
-    @user = User.new({username: params[:first_name]})
-    if @user.save
-      session[:user_id] = @user.id
-      200
+    user_exist = User.find_by(username: params[:first_name])
+    if user_exist == nil
+      @user = User.new({username: params[:first_name]})
+      if @user.save
+        session[:user_id] = @user.id
+        200
+      else
+        @errors = @user.errors.full_messages
+        p @errors
+        erb :index
+      end
     else
-      @errors = @user.errors.full_messages
-      p @errors
-      erb :index
+      session[:user_id] = user_exist.id
     end
   else
     @user = User.new(params[:user])
