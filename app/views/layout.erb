@@ -18,14 +18,14 @@
   <title></title>
 </head>
 <body>
-  <nav class='grey'>
-    <a class = 'nav' href='/'>Home</a>
-    <a class='nav' href='/users/new'>Register</a>
+  <nav>
+    <a class = 'nav-link' href='/'>Home</a>
+    <a class='nav-link' href='/users/new'>Register</a>
     <% if logged_in? %>
-      <a class = 'nav' href='/logout'>Log out</a>
-      <a class='nav' href='/users/<%= current_user.id %>'><%= current_user.username %></a>
+      <a class = 'nav-link' href='/logout'>Log out</a>
+      <a class='nav-link' href='/users/<%= current_user.id %>'><%= current_user.username %></a>
     <% else %>
-      <a class='nav' href='/sessions/new'>Log in</a>
+      <a class='nav-link' href='/sessions/new'>Log in</a>
     <% end %>
   </nav>
     <main>
