@@ -23,6 +23,7 @@ post '/users' do
       end
     else
       session[:user_id] = user_exist.id
+      200
     end
   else
     @user = User.new(params[:user])
