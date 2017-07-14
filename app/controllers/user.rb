@@ -20,7 +20,7 @@ post '/users' do
       else
         @errors = @user.errors.full_messages
         p @errors
-        erb :index
+        200
       end
     else
       session[:user_id] = user_exist.id
