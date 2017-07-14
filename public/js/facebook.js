@@ -57,7 +57,7 @@ $(document).ready(function() {
   // $('a').click(function(){
   // })
   debugger
-  $('nav').on('click', '.logout' function() {
+  $('nav').on('click', '.logout', function() {
     console.log("hi!")
       alert('hey')
     FB.logout(function(response) {
