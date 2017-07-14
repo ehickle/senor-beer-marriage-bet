@@ -1,6 +1,6 @@
 <% if current_user.picks.empty? %>
-  <div class='pick-form gold'>
-    <form action='/picks' method='post'>
+  <div class='form-div gold'>
+    <form id='picks-form' action='/picks' method='post'>
       <% 12.times do |i| %>
         <label> Pick <%= i+1 %>: </label>
         <select name= ":name<%= i+1 %>" required>
