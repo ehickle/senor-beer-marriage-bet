@@ -52,7 +52,8 @@ window.fbAsyncInit = function() {
     });
 };
 
-$('nav').on('click','#logout', function() {
+$('nav').on('click','.logout', function() {
+  console.log("hi!")
   FB.logout(function(response) {
       console.log('logged out')
   });
