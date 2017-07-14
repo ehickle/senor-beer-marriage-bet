@@ -22,11 +22,11 @@ function statusChangeCallback(response) {
   }
 }
 
-  function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-  }
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+  statusChangeCallback(response);
+     });
+}
 
 
 
@@ -51,6 +51,10 @@ window.fbAsyncInit = function() {
       statusChangeCallback(response);
     });
 };
+
+$('a').on('click', function() {
+  alert('what up')
+}
 
 $('nav').on('click','.logout', function() {
   console.log("hi!")
