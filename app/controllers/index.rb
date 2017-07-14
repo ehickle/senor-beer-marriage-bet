@@ -1,5 +1,5 @@
 get '/' do
-  if request.xhr
+  if request.xhr?
     @errors = params[errors]
   end
   erb :index
