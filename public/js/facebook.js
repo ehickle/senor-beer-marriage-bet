@@ -56,6 +56,7 @@ window.fbAsyncInit = function() {
 $(document).ready(function() {
   // $('a').click(function(){
   // })
+  debugger
   $('nav').on('click', '.logout' function() {
     console.log("hi!")
       alert('hey')
