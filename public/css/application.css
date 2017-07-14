@@ -140,6 +140,11 @@ select {
   color:black;
 }
 
+.fb-login-button{
+  z-index:2;
+  margin-left: 75px;
+}
+
 #picks-form {
 /*  padding-top: 100px;
   padding-bottom: 100px;*/
