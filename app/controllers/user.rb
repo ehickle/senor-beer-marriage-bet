@@ -10,7 +10,13 @@ end
 post '/users' do
 
   if request.xhr?
-     params[:first_name]
+    @user = User.create(params[:first_name])
+    if @user.save
+      session[:user_id] = @user.id
+    else
+      @errors = @user.errors.full_messages
+      erb :index
+    end
   else
     @user = User.new(params[:user])
 
