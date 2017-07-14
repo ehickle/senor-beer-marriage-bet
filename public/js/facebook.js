@@ -54,8 +54,10 @@ window.fbAsyncInit = function() {
 
 $('nav').on('click','#logout', function() {
   $.get('/logout')
-  FB.logout(function(response) {
-    console.log('logged out')
+  .done( function() {
+      FB.logout(function(response) {
+        console.log('logged out')
+      });
   });
 });
 
