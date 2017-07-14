@@ -7,6 +7,7 @@
 
 <% if logged_in? && current_user.id == @user.id %>
   <% if @user.picks.any? %>
+  <h3> Your picks: </h3>
     <% picks = @user.picks.sort %>
     <% picks.each do |pick| %>
       <p> <%= pick.name %> </p>

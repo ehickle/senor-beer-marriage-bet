@@ -4,5 +4,10 @@ get '/picks/new' do
 end
 
 post '/picks' do
-  "hello World"
+  p params
+  params.each do |pick, name|
+    current_user.picks.create(name: name)
+  end
+
+  redirect "/users/#{current_user.id}"
 end
