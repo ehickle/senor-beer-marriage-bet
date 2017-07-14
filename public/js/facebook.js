@@ -12,9 +12,9 @@ function statusChangeCallback(response) {
     FB.api('/me', {fields: 'first_name'} , function(resp) {
       console.log(JSON.stringify(resp));
      $.post('/users', resp)
-      })
-    .done( function(response) {
+     .done( function(response) {
       console.log(response)
+      })
     })
   } else {
     // The person is not logged into your app or we are unable to tell.
